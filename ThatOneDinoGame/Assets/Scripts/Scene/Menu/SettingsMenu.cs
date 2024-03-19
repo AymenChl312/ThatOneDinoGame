@@ -8,7 +8,8 @@ public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
 
-    public Slider volumeSlider;
+    public Slider musicSlider;
+    public Slider soundSlider;
     public TMPro.TMP_Dropdown resolutionDropdown;
     public bool isFullscreen = true;
 
@@ -50,37 +51,44 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        if(!PlayerPrefs.HasKey("musicVolume"))
+        if (PlayerPrefs.HasKey("MusicVolume"))
         {
-            PlayerPrefs.SetFloat("musicVolume", 1);
             Load();
         }
 
         else
         {
-            Load();
+            ChangeSoundVolume();
+            ChangeMusicVolume();
         }
 
-        
+
     }
 
-    public void ChangeVolume()
+    public void ChangeMusicVolume()
     {
-        AudioListener.volume = volumeSlider.value;
-        Save();
+        float volume = musicSlider.value;
+        audioMixer.SetFloat("Music", Mathf.Log10(volume)*20);
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+    }
+
+    public void ChangeSoundVolume()
+    {
+        float volume = soundSlider.value;
+        audioMixer.SetFloat("Sound", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("SoundVolume", volume);
     }
 
     public void Load()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        soundSlider.value = PlayerPrefs.GetFloat("SoundVolume");
+
+        ChangeMusicVolume();
+        ChangeSoundVolume();
     }
 
-    public void Save()
-    {
-        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
-    }
 
-    
 
     public void SetFullScreen(bool isFullScreen)
     {
