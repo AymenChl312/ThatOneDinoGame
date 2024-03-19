@@ -17,6 +17,8 @@ public class MainMenu : MonoBehaviour
         {
             Screen.fullScreen = false;
         }
+
+
     }
 
     public void StartGame()
