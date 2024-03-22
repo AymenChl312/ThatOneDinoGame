@@ -10,13 +10,11 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject settingsWindow;
 
-    public Animator animator;
 
     public static PauseMenu instance;
 
     private void Awake()
     {
-        animator = GameObject.FindGameObjectWithTag("FadeSystem").GetComponent<Animator>();
 
         if (instance != null)
         {

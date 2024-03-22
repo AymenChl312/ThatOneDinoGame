@@ -9,14 +9,7 @@ public class MainMenu : MonoBehaviour
 
     public void Start()
     {
-        if (SettingsMenu.instance.isFullscreen == true)
-        {
-            Screen.fullScreen = true;
-        }
-        else
-        {
-            Screen.fullScreen = false;
-        }
+        
 
 
     }

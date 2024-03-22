@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     private Animator fadeSystem;
 
     public float jumpDeath;
+    public AudioClip hitSound;
 
     public static PlayerHealth instance;
 
@@ -44,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(isInvincible == false) 
         {
+            Audio_Manager.instance.PlayClipAt(hitSound, transform.position);
             currentHealth -= damage;
             if (currentHealth <= 0)
             {

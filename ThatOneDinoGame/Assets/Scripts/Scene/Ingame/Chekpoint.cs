@@ -4,6 +4,7 @@ public class Chekpoint : MonoBehaviour
 {
     private Transform playerSpawn;
     public Animator animator;
+    public AudioClip sound;
 
     private void Awake()
     {
@@ -14,7 +15,7 @@ public class Chekpoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            animator.SetTrigger("Confetti");
+            Audio_Manager.instance.PlayClipAt(sound, transform.position);
             playerSpawn.position = transform.position;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }

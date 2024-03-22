@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PickUpObject : MonoBehaviour
 {
-    public AudioSource audioSource;
     public AudioClip sound;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -10,7 +9,7 @@ public class PickUpObject : MonoBehaviour
 
         if(collision.CompareTag("Player"))
         {
-            audioSource.PlayOneShot(sound);
+            Audio_Manager.instance.PlayClipAt(sound, transform.position);
             Inventory.instance.AddCoins(1);
             CurrentSceneManager.instance.coinsPickedUpInThisSceneCount++;
             Destroy(gameObject);

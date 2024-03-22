@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalMovement;
     private float verticalMovement;
 
+    public AudioClip jumpSound;
+
     public static PlayerMovement instance;
 
     private void Awake()
@@ -94,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            Audio_Manager.instance.PlayClipAt(jumpSound, transform.position);
             isJumping = true;
         }
     }

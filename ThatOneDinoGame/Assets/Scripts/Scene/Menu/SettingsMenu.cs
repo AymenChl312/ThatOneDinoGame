@@ -11,7 +11,7 @@ public class SettingsMenu : MonoBehaviour
     public Slider musicSlider;
     public Slider soundSlider;
     public TMPro.TMP_Dropdown resolutionDropdown;
-    public bool isFullscreen = true;
+    public bool isFullscreen;
 
     Resolution[] resolutions;
 
@@ -29,6 +29,8 @@ public class SettingsMenu : MonoBehaviour
 
     public void Start()
     {
+
+
         resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
         resolutionDropdown.ClearOptions();
 
