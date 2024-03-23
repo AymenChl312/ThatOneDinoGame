@@ -21,12 +21,12 @@ public class MainMenu : MonoBehaviour
 
     public void SettingsButton()
     {
-        settingsWindow.SetActive(true);
+        settingsWindow.SetActive(false);
     }
 
     public void CloseSettingsWindow()
     {
-        settingsWindow.SetActive(false);
+        settingsWindow.SetActive(true);
     }
 
     public void QuitGame()

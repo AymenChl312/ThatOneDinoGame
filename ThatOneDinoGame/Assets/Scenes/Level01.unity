@@ -3583,7 +3583,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 29
-      m_TileSpriteIndex: 24
+      m_TileSpriteIndex: 28
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6468,16 +6468,16 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 505e2b6c733534e47a722756dfb52ffb, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 6
     m_Data: {fileID: 21300000, guid: b227b1a691f0d7b428e568c9ab00e36f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: c2bc7b0d8a0015c4f857babec9c4c67d, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 24c474a7a55f6034fbec16b1373f3f2c, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 505e2b6c733534e47a722756dfb52ffb, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 68c4f8f04f980d147b9290c63f20523e, type: 3}
   - m_RefCount: 1
@@ -24920,14 +24920,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1241828610}
-    - target: {fileID: 2256725390429577620, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseSettingsWindow
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256725390429577620, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 6972917730640923887, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -26675,6 +26667,10 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -1217354046430040455, guid: 6e253ff45110f1043b567288b415e521, type: 2}
+    - target: {fileID: 3451395846827863175, guid: 3ce8723ff451d844d856696703e3a81d, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 8300000, guid: ad93fc9d9db0a2449b25dee1ee6a11fe, type: 3}
     - target: {fileID: 3451395846827863175, guid: 3ce8723ff451d844d856696703e3a81d, type: 3}
       propertyPath: soundEffectMixer
       value: 

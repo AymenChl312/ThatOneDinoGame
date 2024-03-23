@@ -13,6 +13,7 @@ public class SettingsMenu : MonoBehaviour
     public TMPro.TMP_Dropdown resolutionDropdown;
     public bool isFullscreen;
 
+    public GameObject inGameToggle;
     Resolution[] resolutions;
 
     public static SettingsMenu instance;
@@ -29,8 +30,8 @@ public class SettingsMenu : MonoBehaviour
 
     public void Start()
     {
-
-
+        inGameToggle = GameObject.Find("FullScreen");
+        
         resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
         resolutionDropdown.ClearOptions();
 
@@ -62,6 +63,27 @@ public class SettingsMenu : MonoBehaviour
         {
             ChangeSoundVolume();
             ChangeMusicVolume();
+        }
+
+        if(PlayerPrefs.HasKey("Fullscreen"))
+        {
+            if(PlayerPrefs.GetInt("Fullscreen") == 1)
+            {
+                inGameToggle.GetComponent<Toggle>().isOn = true;
+                isFullscreen = true;
+                Debug.LogWarning("FullScreen");
+            }
+            else
+            {
+                inGameToggle.GetComponent<Toggle>().isOn = false;
+                isFullscreen = false;
+                Debug.LogWarning("Pas FullScreen");
+            }
+
+        }
+        else
+        {
+            SetFullScreen(isFullscreen);
         }
 
 
@@ -97,11 +119,18 @@ public class SettingsMenu : MonoBehaviour
         Screen.fullScreen = isFullScreen;
         if (isFullScreen)
         {
+            inGameToggle.GetComponent<Toggle>().isOn = true;
+            PlayerPrefs.SetInt("Fullscreen", 1);
             isFullscreen = true;
+            Debug.LogWarning("FullScreen");
+
         }
         else
         {
+            inGameToggle.GetComponent<Toggle>().isOn = false;
+            PlayerPrefs.SetInt("Fullscreen", 0);
             isFullscreen = false;
+            Debug.LogWarning("Pas FullScreen");
         }
     }
 
