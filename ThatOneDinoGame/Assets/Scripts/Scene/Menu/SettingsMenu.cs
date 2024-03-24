@@ -71,13 +71,11 @@ public class SettingsMenu : MonoBehaviour
             {
                 inGameToggle.GetComponent<Toggle>().isOn = true;
                 isFullscreen = true;
-                Debug.LogWarning("FullScreen");
             }
             else
             {
                 inGameToggle.GetComponent<Toggle>().isOn = false;
                 isFullscreen = false;
-                Debug.LogWarning("Pas FullScreen");
             }
 
         }
@@ -122,7 +120,6 @@ public class SettingsMenu : MonoBehaviour
             inGameToggle.GetComponent<Toggle>().isOn = true;
             PlayerPrefs.SetInt("Fullscreen", 1);
             isFullscreen = true;
-            Debug.LogWarning("FullScreen");
 
         }
         else
@@ -130,7 +127,6 @@ public class SettingsMenu : MonoBehaviour
             inGameToggle.GetComponent<Toggle>().isOn = false;
             PlayerPrefs.SetInt("Fullscreen", 0);
             isFullscreen = false;
-            Debug.LogWarning("Pas FullScreen");
         }
     }
 

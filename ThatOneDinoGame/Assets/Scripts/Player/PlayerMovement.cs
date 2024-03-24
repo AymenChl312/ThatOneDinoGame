@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float climbSpeed;
     public float jumpForce;
+    public float trampoJumpForce;
 
     public bool isJumping;
     private bool isGrounded;
@@ -106,6 +107,15 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("WeakSpot"))
         {
             rb.AddForce(new Vector2(0f, jumpForce));
+        }
+    }
+
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Trampoline"))
+        {
+            rb.AddForce(new Vector2(0f, trampoJumpForce));
         }
     }
 
