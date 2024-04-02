@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 733658572811625311}
   - component: {fileID: 4798301259407497456}
   - component: {fileID: 6145202640652891475}
-  - component: {fileID: 4712845697573939317}
   - component: {fileID: 2407976907759907246}
+  - component: {fileID: 4752255793825458715}
   m_Layer: 0
   m_Name: Trampoline
   m_TagString: Trampoline
@@ -108,20 +108,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4712845697573939317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8921750342631468782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c4fa59616ebf77479d66b49bbc18138, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 6145202640652891475}
-  sound: {fileID: 8300000, guid: d8a82019192069d44be77a11f8db0f2b, type: 3}
 --- !u!61 &2407976907759907246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,3 +153,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8699095, y: 0.23786998}
   m_EdgeRadius: 0
+--- !u!114 &4752255793825458715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8921750342631468782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4fa59616ebf77479d66b49bbc18138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6145202640652891475}
+  sound: {fileID: 8300000, guid: d8a82019192069d44be77a11f8db0f2b, type: 3}

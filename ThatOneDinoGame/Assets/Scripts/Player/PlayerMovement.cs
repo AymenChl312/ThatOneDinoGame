@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isJumping;
     private bool isGrounded;
+    private bool doubleJump = true;
+    private bool doubleJumpPowerUp = false;
     [HideInInspector]
     public bool isClimbing;
 
@@ -95,12 +97,44 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (doubleJumpPowerUp)
         {
-            Audio_Manager.instance.PlayClipAt(jumpSound, transform.position);
-            isJumping = true;
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (isGrounded || doubleJump)
+                {
+                    Audio_Manager.instance.PlayClipAt(jumpSound, transform.position);
+                    isJumping = true;
+                    doubleJump = !doubleJump;
+                }
+            }
+
+            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
         }
+        else
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (isGrounded)
+                {
+                    Audio_Manager.instance.PlayClipAt(jumpSound, transform.position);
+                    isJumping = true;
+                }
+            }
+
+            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+        }
+        
     }
+
+   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -108,16 +142,22 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(0f, jumpForce));
         }
+        if (collision.CompareTag("Bananailes"))
+        {
+            Destroy(collision.gameObject);
+            GetComponent<SpriteRenderer>().color = Color.yellow;
+            doubleJumpPowerUp = true;
+        }
     }
 
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Trampoline"))
         {
             rb.AddForce(new Vector2(0f, trampoJumpForce));
         }
     }
+
 
     void Flip(float _velocity)
     {

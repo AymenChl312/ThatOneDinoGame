@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2791173483838997796}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2791173483838997797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: -0.284, z: 0}
+  m_LocalPosition: {x: 0.004, y: -0.938, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 2791173484603557200}
   - component: {fileID: 2791173484603557207}
   - component: {fileID: 2791173484603557206}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -110,12 +110,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -688808104, guid: bccd2a5222cd85a489361ecdce600be8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8331462ea849be42837c5e6e19aec71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -134,8 +134,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 250
-  climbSpeed: 0
-  jumpForce: 325
+  climbSpeed: 150
+  jumpForce: 250
+  trampoJumpForce: 500
   isJumping: 0
   isClimbing: 0
   groundCheck: {fileID: 2791173483838997796}
@@ -144,7 +145,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   rb: {fileID: 2791173484603557213}
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 2791173484603557206}
   animator: {fileID: 2791173484603557200}
   spriteRenderer: {fileID: 2791173484603557203}
   jumpSound: {fileID: 8300000, guid: b310110ffac24b54a958e6add4fe1ad5, type: 3}
@@ -208,12 +209,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059f8a27f07be2a4cadaab4a8c7bcda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
+  maxHealth: 1
   currentHealth: 0
   isInvincible: 0
   animator: {fileID: 2791173484603557200}
   invincibilityTimeAfterHit: 2
-  jumpDeath: 0
+  jumpDeath: 150
   hitSound: {fileID: 8300000, guid: ff200f8b14631b4468fcea78c7153f90, type: 3}
 --- !u!70 &2791173484603557206
 CapsuleCollider2D:
@@ -247,6 +248,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.035125732, y: 0.0043423176}
-  m_Size: {x: 0.4322996, y: 0.6857047}
+  m_Offset: {x: 0.020780802, y: -0.48105323}
+  m_Size: {x: 0.45953226, y: 0.9750364}
   m_Direction: 0
