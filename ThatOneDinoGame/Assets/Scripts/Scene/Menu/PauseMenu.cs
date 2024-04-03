@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject settingsWindow;
 
+    private Animator fadeSystem;
 
     public static PauseMenu instance;
 
@@ -72,6 +73,7 @@ public class PauseMenu : MonoBehaviour
         Inventory.instance.RemoveCoins(CurrentSceneManager.instance.coinsPickedUpInThisSceneCount);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         PlayerHealth.instance.Respawn();
+        PowerUp.instance.active = false;
         Resume();
     }
 

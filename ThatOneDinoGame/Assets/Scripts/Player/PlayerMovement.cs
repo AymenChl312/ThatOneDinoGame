@@ -7,10 +7,14 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float trampoJumpForce;
 
+    //PowerUp
+
+    public bool doubleJumpPowerUp = false;
+
+
     public bool isJumping;
     private bool isGrounded;
     private bool doubleJump = true;
-    private bool doubleJumpPowerUp = false;
     [HideInInspector]
     public bool isClimbing;
 
@@ -141,12 +145,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("WeakSpot"))
         {
             rb.AddForce(new Vector2(0f, jumpForce));
-        }
-        if (collision.CompareTag("Bananailes"))
-        {
-            Destroy(collision.gameObject);
-            GetComponent<SpriteRenderer>().color = Color.yellow;
-            doubleJumpPowerUp = true;
         }
     }
 

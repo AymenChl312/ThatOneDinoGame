@@ -25551,6 +25551,7 @@ GameObject:
   - component: {fileID: 1459730614}
   - component: {fileID: 1459730613}
   - component: {fileID: 1459730612}
+  - component: {fileID: 1459730616}
   m_Layer: 0
   m_Name: Bananaile
   m_TagString: Bananailes
@@ -25691,6 +25692,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1459730616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459730610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1671783b6ab8a414399ce1de66c6f34a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bananailes: {fileID: 1459730612}
+  active: 0
 --- !u!1001 &1566209438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26988,6 +27003,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -654943690, guid: 5d20983787c767040bd7e2048ce4dbe3, type: 3}
+    - target: {fileID: 2791173484603557212, guid: 1e8971982056898449be6378cfa890fc, type: 3}
+      propertyPath: jumpForce
+      value: 350
+      objectReference: {fileID: 0}
     - target: {fileID: 2791173484603557215, guid: 1e8971982056898449be6378cfa890fc, type: 3}
       propertyPath: m_Name
       value: Player

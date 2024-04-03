@@ -50,6 +50,7 @@ public class PlayerHealth : MonoBehaviour
             if (currentHealth <= 0)
             {
                 Die();
+                PowerUp.instance.active = false;
             }
             else
             {

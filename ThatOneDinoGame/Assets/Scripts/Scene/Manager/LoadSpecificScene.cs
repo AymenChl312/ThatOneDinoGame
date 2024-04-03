@@ -17,6 +17,7 @@ public class LoadSpecificScene : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             StartCoroutine(loadNextScene());
+            PowerUp.instance.active = false;
         }
     }
 
