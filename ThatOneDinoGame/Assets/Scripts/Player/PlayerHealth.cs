@@ -50,7 +50,7 @@ public class PlayerHealth : MonoBehaviour
             if (currentHealth <= 0)
             {
                 Die();
-                PowerUp.instance.active = false;
+               
             }
             else
             {
@@ -74,6 +74,11 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(HandleInvincibilityDelay());
         isInvincible = true;
         PlayerMovement.instance.enabled = false;
+        if (PowerUp.instance.active == true)
+        {
+            PowerUp.instance.active = false;
+            PowerUp.instance.powerUpActive();
+        }
     }
 
     public void Respawn()

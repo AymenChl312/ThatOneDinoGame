@@ -3,7 +3,8 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
 
-    public BoxCollider2D bananailes;
+    public BoxCollider2D bananailesBox;
+    public SpriteRenderer bananailesSprite;
 
     public bool active = false;
 
@@ -21,23 +22,22 @@ public class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter2D()
     {
-        if (bananailes.CompareTag("Bananailes"))
+        if (bananailesBox.CompareTag("Bananailes"))
         {
             active = true;
-            Debug.LogWarning("true active");
-            Destroy(bananailes.gameObject);
+            Destroy(bananailesBox);
+            Destroy(bananailesSprite);
             PlayerMovement.instance.GetComponent<SpriteRenderer>().color = Color.yellow;
             PlayerMovement.instance.doubleJumpPowerUp = true;
         }
     }
 
-    private void powerUpActive()
+    public void powerUpActive()
     {
         if (active==false)
         {
             PlayerMovement.instance.GetComponent<SpriteRenderer>().color = Color.white;
             PlayerMovement.instance.doubleJumpPowerUp = false;
-            Debug.LogWarning("false active");
         }
     }
     

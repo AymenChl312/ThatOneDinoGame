@@ -7,16 +7,12 @@ public class MainMenu : MonoBehaviour
 
     public GameObject settingsWindow;
 
-    public void Start()
+    public void Update()
     {
-        
-
-
-    }
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene(levelToLoad);
+        if (Input.GetKeyDown("space"))
+        {
+            SceneManager.LoadScene(levelToLoad);
+        }
     }
 
     public void SettingsButton()
