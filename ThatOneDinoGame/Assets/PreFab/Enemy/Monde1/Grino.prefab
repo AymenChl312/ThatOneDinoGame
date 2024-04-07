@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7869672308984451076}
   - component: {fileID: 857887349351308272}
   - component: {fileID: 7171675917994621444}
+  - component: {fileID: 1636686874199502312}
   m_Layer: 0
   m_Name: Grino
   m_TagString: Monster
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 604486365115474506}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9079137, y: 0.236, z: 0.004920606}
+  m_LocalPosition: {x: -1.5, y: 1.2, z: 0.004920606}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1072090232, guid: acad8f95f21b8884c9d754d80f8d4034, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 604486365115474506}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 45adfed312a96ce4482453ca28e6985a, type: 2}
+  m_Material: {fileID: 6200000, guid: a709cc8581fa61d42a0bad126f7520af, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -172,6 +173,19 @@ MonoBehaviour:
   - {fileID: 3225575777072920306}
   damageOnCollision: 1
   graphics: {fileID: 4686041686425945167}
+--- !u!114 &1636686874199502312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604486365115474506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6519472098af0141a36e3b6caabaeec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 6660775646745276294}
 --- !u!1 &2668290255019788754
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +228,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2668290255019788754}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a709cc8581fa61d42a0bad126f7520af, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -262,8 +276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675f85b9786095043afe14f20ce33773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 6660775646745276294}
+  animator: {fileID: 857887349351308272}
   sound: {fileID: 8300000, guid: 1832890f965da004b8e3170ebc03f06e, type: 3}
+  monster: {fileID: 604486365115474506}
 --- !u!1 &4264050528715769796
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +290,7 @@ GameObject:
   - component: {fileID: 3225575777072920306}
   m_Layer: 0
   m_Name: Waypoint2
-  m_TagString: Untagged
+  m_TagString: Waypoints
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 4264050528715769796}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.25, y: 0.22, z: 0.004920606}
+  m_LocalPosition: {x: 3.738, y: 1.207, z: 0.004920606}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -340,7 +355,7 @@ GameObject:
   - component: {fileID: 8889963808380753395}
   m_Layer: 0
   m_Name: Waypoint1
-  m_TagString: Untagged
+  m_TagString: Waypoints
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,7 +369,7 @@ Transform:
   m_GameObject: {fileID: 7541407676523011039}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.928, y: 0.224, z: 0.004920606}
+  m_LocalPosition: {x: -1.49, y: 1.208, z: 0.004920606}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

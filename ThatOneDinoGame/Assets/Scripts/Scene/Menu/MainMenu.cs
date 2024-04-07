@@ -15,6 +15,11 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    public void LoadCreditsScene()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void SettingsButton()
     {
         settingsWindow.SetActive(false);

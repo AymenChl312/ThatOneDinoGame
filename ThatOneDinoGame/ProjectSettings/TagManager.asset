@@ -12,6 +12,8 @@ TagManager:
   - PlayerSpawn
   - Trampoline
   - Bananailes
+  - Piege
+  - Waypoints
   layers:
   - Default
   - TransparentFX

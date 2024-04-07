@@ -21,13 +21,14 @@ public class EnemyPatrol : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        //Si l'ennemi est quasi arrivé il change de target
-        if(Vector3.Distance(transform.position, target.position) < 0.3f)
+        //Si l'ennemi est quasi arrivï¿½ il change de target
+        if(Vector3.Distance(transform.position, target.position) < 0.3f)   
         {
             destPoint = (destPoint + 1) % waypoints.Length;
             target = waypoints[destPoint];
             graphics.flipX = !graphics.flipX;
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

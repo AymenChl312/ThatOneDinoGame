@@ -1238,7 +1238,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 7
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -26854,93 +26854,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587015007}
     m_Modifications:
-    - target: {fileID: 257567085045518239, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: a709cc8581fa61d42a0bad126f7520af, type: 2}
-    - target: {fileID: 3225575777072920306, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.738
-      objectReference: {fileID: 0}
-    - target: {fileID: 3225575777072920306, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.207
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.6585543
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.7000365
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.3179275
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019034, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3823541688611019035, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
+    - target: {fileID: 6660775646745276294, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Grino
       objectReference: {fileID: 0}
-    - target: {fileID: 4686041686425945167, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248349955826283316, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5248349955826283316, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7869672308984451076, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: a709cc8581fa61d42a0bad126f7520af, type: 2}
     - target: {fileID: 8690921399076007358, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -524.4
       objectReference: {fileID: 0}
     - target: {fileID: 8690921399076007358, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -285.95
+      value: -286.01
       objectReference: {fileID: 0}
     - target: {fileID: 8690921399076007358, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.7396301
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690921399076007358, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8690921399076007358, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
       propertyPath: m_LocalRotation.x
@@ -26954,13 +26886,17 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 8889963808380753395, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.49
+    - target: {fileID: 8690921399076007358, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8889963808380753395, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.208
+    - target: {fileID: 8690921399076007358, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690921399076007358, guid: 0c4f9a71dcb23554ba5e869ffe4a5cbc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
