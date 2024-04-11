@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 857887349351308272}
-  sound: {fileID: 8300000, guid: 1832890f965da004b8e3170ebc03f06e, type: 3}
+  sound: {fileID: 8300000, guid: 1119704f70456a74aaee4543ac8a355d, type: 3}
   monster: {fileID: 604486365115474506}
 --- !u!1 &4264050528715769796
 GameObject:

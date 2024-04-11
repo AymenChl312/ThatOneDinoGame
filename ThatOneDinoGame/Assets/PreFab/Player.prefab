@@ -110,7 +110,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: e8331462ea849be42837c5e6e19aec71, type: 3}
+  m_Sprite: {fileID: -654943690, guid: 5d20983787c767040bd7e2048ce4dbe3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -137,6 +137,8 @@ MonoBehaviour:
   climbSpeed: 150
   jumpForce: 250
   trampoJumpForce: 500
+  doubleJumpPowerUp: 0
+  doubleJumpForce: 350
   isJumping: 0
   isClimbing: 0
   groundCheck: {fileID: 2791173483838997796}
@@ -148,7 +150,7 @@ MonoBehaviour:
   playerCollider: {fileID: 2791173484603557206}
   animator: {fileID: 2791173484603557200}
   spriteRenderer: {fileID: 2791173484603557203}
-  jumpSound: {fileID: 8300000, guid: b310110ffac24b54a958e6add4fe1ad5, type: 3}
+  jumpSound: {fileID: 8300000, guid: 8992484eef6519140934c9f6aa15f326, type: 3}
 --- !u!50 &2791173484603557213
 Rigidbody2D:
   serializedVersion: 4
@@ -215,7 +217,7 @@ MonoBehaviour:
   animator: {fileID: 2791173484603557200}
   invincibilityTimeAfterHit: 2
   jumpDeath: 150
-  hitSound: {fileID: 8300000, guid: ff200f8b14631b4468fcea78c7153f90, type: 3}
+  hitSound: {fileID: 8300000, guid: 19906059bb4800d40a81876b9fa74af1, type: 3}
 --- !u!70 &2791173484603557206
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: -4466296774914717094}
-  sound: {fileID: 8300000, guid: 9e489e5fd5717534ebd6c7d92a9edd59, type: 3}
+  sound: {fileID: 8300000, guid: c5eb21a8681ef5d429e9850784596549, type: 3}
 --- !u!212 &1369227639265848035
 SpriteRenderer:
   m_ObjectHideFlags: 0

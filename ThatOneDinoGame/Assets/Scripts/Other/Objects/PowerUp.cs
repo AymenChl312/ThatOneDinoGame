@@ -5,6 +5,7 @@ public class PowerUp : MonoBehaviour
 
     public BoxCollider2D bananailesBox;
     public SpriteRenderer bananailesSprite;
+    public AudioClip sound;
 
     public bool active = false;
 
@@ -25,6 +26,7 @@ public class PowerUp : MonoBehaviour
         if (bananailesBox.CompareTag("Bananailes"))
         {
             active = true;
+            Audio_Manager.instance.PlayClipAt(sound, transform.position);
             Destroy(bananailesBox);
             Destroy(bananailesSprite);
             PlayerMovement.instance.GetComponent<SpriteRenderer>().color = Color.yellow;

@@ -166,4 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6145202640652891475}
-  sound: {fileID: 8300000, guid: d8a82019192069d44be77a11f8db0f2b, type: 3}
+  sound: {fileID: 8300000, guid: 602436bc51cbf004b865d1ed8cf1f4e7, type: 3}
