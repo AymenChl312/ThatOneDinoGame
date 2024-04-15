@@ -24974,6 +24974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1241828609}
   - component: {fileID: 1241828610}
+  - component: {fileID: 1241828611}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -25010,6 +25011,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 562826715}
   settingsWindow: {fileID: 52560671}
+--- !u!114 &1241828611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241828607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa64ac58f5700f4c92d31e44acf6409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1256299535
 GameObject:
   m_ObjectHideFlags: 0

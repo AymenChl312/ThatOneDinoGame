@@ -5,7 +5,7 @@ using System.Collections;
 public class LoadSpecificScene : MonoBehaviour
 {
     public string sceneName;
-    public Animator animator;
+    private Animator animator;
 
     private void Awake()
     {
@@ -27,6 +27,7 @@ public class LoadSpecificScene : MonoBehaviour
 
     public IEnumerator loadNextScene()
     {
+        LoadAndSaveData.instance.SaveData();
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName);
