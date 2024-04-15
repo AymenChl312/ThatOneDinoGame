@@ -59,21 +59,16 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenuButton()
     {
-        DontDestroyOnLoadScene.instance.RemoveFromDontDestroyOnLoad();
         Resume();
         SceneManager.LoadScene("MainMenu");
     }
 
     public void RetryButton()
     {
-        if (CurrentSceneManager.instance.isPlayerPresentByDefault)
-        {
-            DontDestroyOnLoadScene.instance.RemoveFromDontDestroyOnLoad();
-        }
         Inventory.instance.RemoveCoins(CurrentSceneManager.instance.coinsPickedUpInThisSceneCount);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         PlayerHealth.instance.Respawn();
-        PowerUp.instance.active = false;
+        CurrentSceneManager.instance.active = false;
         Resume();
     }
 

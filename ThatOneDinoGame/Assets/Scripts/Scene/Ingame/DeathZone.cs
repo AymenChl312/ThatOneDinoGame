@@ -11,7 +11,6 @@ public class DeathZone : MonoBehaviour
 
     private void Awake()
     {
-        PlayerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
         fadeSystem = GameObject.FindGameObjectWithTag("FadeSystem").GetComponent<Animator>();
     }
 
@@ -31,7 +30,7 @@ public class DeathZone : MonoBehaviour
     public IEnumerator ReplacePlayer(Collider2D collision)
     {
         yield return new WaitForSeconds(1f);
-        collision.transform.position = PlayerSpawn.position;
+        collision.transform.position = CurrentSceneManager.instance.respawnPoint;
     }
 
 }

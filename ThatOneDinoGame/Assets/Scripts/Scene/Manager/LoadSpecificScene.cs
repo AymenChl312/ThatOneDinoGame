@@ -17,10 +17,10 @@ public class LoadSpecificScene : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             StartCoroutine(loadNextScene());
-            if (PowerUp.instance.active == true)
+            if (CurrentSceneManager.instance.active == true)
             {
-                PowerUp.instance.active = false;
-                PowerUp.instance.powerUpActive();
+                CurrentSceneManager.instance.active = false;
+                CurrentSceneManager.instance.powerUpActive();
             }
         }
     }

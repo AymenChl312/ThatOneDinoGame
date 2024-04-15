@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public Animator animator;
 
     public float invincibilityTimeAfterHit = 1f;
-    private Transform PlayerSpawn;
+    private Vector3 PlayerSpawn;
     private Animator fadeSystem;
 
     public float jumpDeath;
@@ -68,16 +68,16 @@ public class PlayerHealth : MonoBehaviour
         PlayerMovement.instance.rb.AddForce(new Vector2(0f, jumpDeath));
         PlayerMovement.instance.playerCollider.enabled = false;
         PlayerMovement.instance.rb.velocity = Vector3.zero;
-        PlayerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
+        PlayerSpawn = CurrentSceneManager.instance.respawnPoint;
         fadeSystem = GameObject.FindGameObjectWithTag("FadeSystem").GetComponent<Animator>();
         StartCoroutine(ReplacePlayer());
         StartCoroutine(HandleInvincibilityDelay());
         isInvincible = true;
         PlayerMovement.instance.enabled = false;
-        if (PowerUp.instance.active == true)
+        if (CurrentSceneManager.instance.active == true)
         {
-            PowerUp.instance.active = false;
-            PowerUp.instance.powerUpActive();
+            CurrentSceneManager.instance.active = false;
+            CurrentSceneManager.instance.powerUpActive();
         }
     }
 
@@ -105,7 +105,7 @@ public class PlayerHealth : MonoBehaviour
     {
         fadeSystem.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1f);
-        transform.position = PlayerSpawn.position;
+        transform.position = PlayerSpawn;
         currentHealth = maxHealth;
         PlayerMovement.instance.playerCollider.enabled = true;
     }

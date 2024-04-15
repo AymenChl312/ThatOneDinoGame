@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CurrentSceneManager : MonoBehaviour
 {
-    public bool isPlayerPresentByDefault = false;
     public int coinsPickedUpInThisSceneCount;
+
+    public Vector3 respawnPoint;
+
+    public bool active = false;
 
     public static CurrentSceneManager instance;
 
@@ -17,5 +18,16 @@ public class CurrentSceneManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        respawnPoint = GameObject.FindGameObjectWithTag("Player").transform.position;
+    }
+
+    public void powerUpActive()
+    {
+        if (active==false)
+        {
+            PlayerMovement.instance.GetComponent<SpriteRenderer>().color = Color.white;
+            PlayerMovement.instance.doubleJumpPowerUp = false;
+        }
     }
 }
