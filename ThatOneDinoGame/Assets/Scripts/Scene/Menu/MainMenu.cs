@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public string levelToLoad;
 
     public GameObject settingsWindow;
 
@@ -11,7 +10,15 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            SceneManager.LoadScene(levelToLoad);
+            if (PlayerPrefs.GetInt("levelReached") > 0)
+            {
+                SceneManager.LoadScene("LevelSelect");
+            }
+            else
+            {
+                SceneManager.LoadScene("Level0");
+            }
+            
         }
     }
 

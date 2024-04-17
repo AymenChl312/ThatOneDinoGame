@@ -150,7 +150,7 @@ MonoBehaviour:
   playerCollider: {fileID: 2791173484603557206}
   animator: {fileID: 2791173484603557200}
   spriteRenderer: {fileID: 2791173484603557203}
-  jumpSound: {fileID: 8300000, guid: 8992484eef6519140934c9f6aa15f326, type: 3}
+  jumpSound: {fileID: 8300000, guid: c86bf88d8d390cf439f2b6c6246e50e4, type: 3}
 --- !u!50 &2791173484603557213
 Rigidbody2D:
   serializedVersion: 4

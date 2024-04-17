@@ -8,6 +8,8 @@ public class CurrentSceneManager : MonoBehaviour
 
     public bool active = false;
 
+    public int levelToUnlock;
+
     public static CurrentSceneManager instance;
 
     private void Awake()
