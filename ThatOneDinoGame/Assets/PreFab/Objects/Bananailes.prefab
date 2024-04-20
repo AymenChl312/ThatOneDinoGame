@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3884529381765036354}
   - component: {fileID: 4266800029963461809}
   - component: {fileID: 2375525488464479405}
-  - component: {fileID: 8122151636619731946}
+  - component: {fileID: 6916926951067628755}
   m_Layer: 0
   m_Name: Bananailes
   m_TagString: Bananailes
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4959127009145999348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.79999995, y: 5.89, z: -0.010346636}
+  m_LocalPosition: {x: 0.79999995, y: 5.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -153,7 +153,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2931366, y: 0.854886}
   m_EdgeRadius: 0
---- !u!114 &8122151636619731946
+--- !u!114 &6916926951067628755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,10 +162,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4959127009145999348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1671783b6ab8a414399ce1de66c6f34a, type: 3}
+  m_Script: {fileID: 11500000, guid: 91fa4bcc258af2e478d7ff0f6919fcb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bananailesBox: {fileID: 2375525488464479405}
-  bananailesSprite: {fileID: 3884529381765036354}
+  itemBox: {fileID: 2375525488464479405}
   sound: {fileID: 8300000, guid: 6bdeb3aa7b9cbef4986f0d16545c9f94, type: 3}
-  active: 0
+  item: {fileID: 11400000, guid: a373369cf905a7b4db7d4a6056b4d5f3, type: 2}

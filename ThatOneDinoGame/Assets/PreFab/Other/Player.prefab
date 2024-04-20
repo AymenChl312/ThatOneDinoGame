@@ -145,7 +145,7 @@ MonoBehaviour:
   groundCheckRadius: 0.15
   collisionLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   rb: {fileID: 2791173484603557213}
   playerCollider: {fileID: 2791173484603557206}
   animator: {fileID: 2791173484603557200}

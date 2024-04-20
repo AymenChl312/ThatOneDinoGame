@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033682829119535846}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.01, y: 1.81, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47,12 +47,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Cactusman
+    names:
+    - Cactusman
+    - Cactusman
+    - Cactusman
+    - Dino
     sentences:
     - CACACTUS!
     - Je suis cacactusman, je vais te dire un secret.
     - Je mange les caca des autres cactus de mon village cactus.
-    sprite: {fileID: -296957348, guid: b398554a65440da459080f88734ea029, type: 3}
+    - ' t''es bizarre mais ok chacun ces gouts'
+    sprites:
+    - {fileID: -296957348, guid: b398554a65440da459080f88734ea029, type: 3}
+    - {fileID: -296957348, guid: b398554a65440da459080f88734ea029, type: 3}
+    - {fileID: -296957348, guid: b398554a65440da459080f88734ea029, type: 3}
+    - {fileID: -654943690, guid: 5d20983787c767040bd7e2048ce4dbe3, type: 3}
   isInRange: 0
 --- !u!61 &1270296094222590182
 BoxCollider2D:

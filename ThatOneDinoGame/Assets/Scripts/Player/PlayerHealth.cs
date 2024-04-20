@@ -74,11 +74,9 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(HandleInvincibilityDelay());
         isInvincible = true;
         PlayerMovement.instance.enabled = false;
-        if (CurrentSceneManager.instance.active == true)
-        {
-            CurrentSceneManager.instance.active = false;
-            CurrentSceneManager.instance.powerUpActive();
-        }
+        CurrentSceneManager.instance.active = false;
+        CurrentSceneManager.instance.doubleJumpItem = false;
+        CurrentSceneManager.instance.powerUpActive();
     }
 
     public void Respawn()
