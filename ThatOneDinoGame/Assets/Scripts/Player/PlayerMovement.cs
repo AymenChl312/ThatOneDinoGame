@@ -73,30 +73,29 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
-
-        if (!isClimbing)
-        {
-            rb.gravityScale = 1;
-            Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-
-            if (isJumping)
+            if (!isClimbing)
             {
-                rb.AddForce(new Vector2(0f, jumpForce));
-                isJumping = false;
+                rb.gravityScale = 1;
+                Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
+                rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+
+                if (isJumping)
+                {
+                    rb.AddForce(new Vector2(0f, jumpForce));
+                    isJumping = false;
+                }
             }
-        }
-        else
-        {
-            rb.gravityScale = 0;
-            Vector3 targetVelocity = new Vector2(_horizontalMovement, _verticalMovement);
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-            if (isJumping)
+            else
             {
-                rb.AddForce(new Vector2(0f, jumpForce));
-                isJumping = false;
+                rb.gravityScale = 0;
+                Vector3 targetVelocity = new Vector2(_horizontalMovement, _verticalMovement);
+                rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+                if (isJumping)
+                {
+                    rb.AddForce(new Vector2(0f, jumpForce));
+                    isJumping = false;
+                }
             }
-        }
         
     }
 

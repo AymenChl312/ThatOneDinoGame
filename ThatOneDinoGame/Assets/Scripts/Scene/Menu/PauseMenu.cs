@@ -51,7 +51,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        PlayerMovement.instance.enabled = true;
+        if(DialogueManager.instance.isTalking == false)
+        {
+            PlayerMovement.instance.enabled = true;
+        }
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
