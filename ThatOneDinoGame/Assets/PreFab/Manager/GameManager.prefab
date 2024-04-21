@@ -73,6 +73,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  isTalking: 0
   nameText: {fileID: 0}
   dialogueText: {fileID: 0}
   characterSprite: {fileID: 0}
+  stopAudioSource: 1

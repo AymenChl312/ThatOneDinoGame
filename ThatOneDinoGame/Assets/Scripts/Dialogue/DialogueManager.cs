@@ -13,10 +13,13 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public Image characterSprite;
-
+    private AudioSource audioSource;
+    private bool stopAudioSource=true;
     private Queue<string> sentences;
     private Queue<Sprite> sprites;
     private Queue<string> names;
+    private Queue<AudioClip> characterVoices;
+
 
     private void Awake()
     {
@@ -30,6 +33,8 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         sprites = new Queue<Sprite>();
         names = new Queue<string>();
+        characterVoices = new Queue<AudioClip>();
+        audioSource =this.gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -51,6 +56,7 @@ public class DialogueManager : MonoBehaviour
         sentences.Clear();
         names.Clear();
         sprites.Clear();
+        characterVoices.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -63,6 +69,10 @@ public class DialogueManager : MonoBehaviour
         foreach (Sprite sprite in dialogue.sprites)
         {
             sprites.Enqueue(sprite);
+        }
+        foreach (AudioClip characterVoice in dialogue.characterVoices)
+        {
+            characterVoices.Enqueue(characterVoice);
         }
 
         DisplayNextSentence();
@@ -81,17 +91,23 @@ public class DialogueManager : MonoBehaviour
             string sentence = sentences.Dequeue();
             nameText.text = names.Dequeue();
             characterSprite.sprite = sprites.Dequeue();
+            AudioClip characterVoice = characterVoices.Dequeue();
             StopAllCoroutines();
-            StartCoroutine(TypeSentence(sentence));
+            StartCoroutine(TypeSentence(sentence, characterVoice));
         }
     }
 
-    IEnumerator TypeSentence(string sentence)
+    IEnumerator TypeSentence(string sentence, AudioClip characterVoice)
     {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            if(stopAudioSource)
+            {
+                audioSource.Stop();
+            }
+            audioSource.PlayOneShot(characterVoice);      
             yield return new WaitForSeconds(0.03f);
         }
     }

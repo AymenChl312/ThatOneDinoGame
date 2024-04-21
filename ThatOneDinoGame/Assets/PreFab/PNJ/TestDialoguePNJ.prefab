@@ -62,6 +62,11 @@ MonoBehaviour:
     - {fileID: -296957348, guid: b398554a65440da459080f88734ea029, type: 3}
     - {fileID: -296957348, guid: b398554a65440da459080f88734ea029, type: 3}
     - {fileID: -654943690, guid: 5d20983787c767040bd7e2048ce4dbe3, type: 3}
+    characterVoices:
+    - {fileID: 8300000, guid: 8992484eef6519140934c9f6aa15f326, type: 3}
+    - {fileID: 8300000, guid: 8992484eef6519140934c9f6aa15f326, type: 3}
+    - {fileID: 8300000, guid: 8992484eef6519140934c9f6aa15f326, type: 3}
+    - {fileID: 8300000, guid: 6bdeb3aa7b9cbef4986f0d16545c9f94, type: 3}
   isInRange: 0
 --- !u!61 &1270296094222590182
 BoxCollider2D:

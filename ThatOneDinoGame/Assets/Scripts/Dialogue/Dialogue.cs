@@ -11,4 +11,6 @@ public class Dialogue
 
     public Sprite[] sprites;
 
+    public AudioClip[] characterVoices;
+
 }
