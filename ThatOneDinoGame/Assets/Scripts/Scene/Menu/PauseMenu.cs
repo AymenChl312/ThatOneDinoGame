@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsWindow;
 
     private Animator fadeSystem;
+    public Animator bulles;
+    public Animator pauseText;
 
     public static PauseMenu instance;
 
@@ -45,6 +47,7 @@ public class PauseMenu : MonoBehaviour
     {
         PlayerMovement.instance.enabled = false;
         pauseMenuUI.SetActive(true);
+        StartCoroutine(PauseOpen());
         Time.timeScale = 0;
         gameIsPaused = true;
     }
@@ -55,7 +58,8 @@ public class PauseMenu : MonoBehaviour
         {
             PlayerMovement.instance.enabled = true;
         }
-        pauseMenuUI.SetActive(false);
+        StartCoroutine(PauseClose());
+        
         Time.timeScale = 1;
         gameIsPaused = false;
     }
@@ -83,5 +87,20 @@ public class PauseMenu : MonoBehaviour
     public void CloseSettingsWindow()
     {
         settingsWindow.SetActive(false);
+    }
+
+    public IEnumerator PauseOpen()
+    {
+        bulles.SetBool("isOpen", true);
+        pauseText.SetBool("isOpen", true);
+        yield return new WaitForSeconds(1f);
+    }
+
+    public IEnumerator PauseClose()
+    {
+        bulles.SetBool("isOpen", false);
+        pauseText.SetBool("isOpen", false);
+        yield return new WaitForSeconds(2f);
+        pauseMenuUI.SetActive(false);
     }
 }

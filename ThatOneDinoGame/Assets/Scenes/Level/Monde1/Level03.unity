@@ -4363,6 +4363,11 @@ Transform:
   - {fileID: 242241486}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &526441500 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4427725877682659952, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &562826715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4029546440825447148, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
@@ -4410,6 +4415,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &716124354 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8107506214465082134, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &858880569 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7167698958914287260, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
@@ -4760,6 +4770,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 124685001}
     - target: {fileID: 3828915565572117603, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: bulles
+      value: 
+      objectReference: {fileID: 526441500}
+    - target: {fileID: 3828915565572117603, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: pauseText
+      value: 
+      objectReference: {fileID: 716124354}
+    - target: {fileID: 3828915565572117603, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 562826715}
@@ -4852,7 +4870,7 @@ PrefabInstance:
     - target: {fileID: 190978691979010800, guid: 68d62ea0b3686b745826e66423992b8d, type: 3}
       propertyPath: empty
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 60fb72fdbc2b0b741a500a46330dcae9, type: 3}
     - target: {fileID: 190978691979010800, guid: 68d62ea0b3686b745826e66423992b8d, type: 3}
       propertyPath: sound
       value: 
@@ -5095,6 +5113,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1241828610}
+    - target: {fileID: 4029546440825447148, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4746042930560022821, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

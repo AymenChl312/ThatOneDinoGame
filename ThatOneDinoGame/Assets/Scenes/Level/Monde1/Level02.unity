@@ -315,6 +315,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 717425004}
     - target: {fileID: 3828915565572117603, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: bulles
+      value: 
+      objectReference: {fileID: 1779963733}
+    - target: {fileID: 3828915565572117603, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: pauseText
+      value: 
+      objectReference: {fileID: 1779963732}
+    - target: {fileID: 3828915565572117603, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1257467900}
@@ -3406,18 +3414,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 410159425}
-    - target: {fileID: 1242084913036751785, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GetNextItem
-      objectReference: {fileID: 0}
     - target: {fileID: 1346638395325681595, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 410159425}
-    - target: {fileID: 1346638395325681595, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ConsumeItem
-      objectReference: {fileID: 0}
     - target: {fileID: 3227795882823879118, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3446,10 +3446,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 410159425}
-    - target: {fileID: 7830331106311234165, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GetPreviousItem
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3477,6 +3473,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1779963732 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8107506214465082134, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1779963729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1779963733 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4427725877682659952, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1779963729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1821545360 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4793237562096063910, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}

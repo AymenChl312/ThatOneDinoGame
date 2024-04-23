@@ -1508,6 +1508,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3340826042861909476, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1890107336945032190}
+    - target: {fileID: 3340826042861909476, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 1890107336945032189}
+    - target: {fileID: 3340826042861909476, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 1890107336945032188}
+    - target: {fileID: 3340826042861909476, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: characterSprite
+      value: 
+      objectReference: {fileID: 1890107336945032186}
+    - target: {fileID: 3828915565572117603, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: bulles
+      value: 
+      objectReference: {fileID: 1890107336945032191}
+    - target: {fileID: 3828915565572117603, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: pauseText
+      value: 
+      objectReference: {fileID: 1890107336945032187}
     - target: {fileID: 3828915565572117603, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
       propertyPath: pauseMenuUI
       value: 
@@ -1829,6 +1853,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1890107336945032186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8393547957451774613, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1890107336945032187 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8107506214465082134, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1890107336945032188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7285149201319508506, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1890107336945032189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2977791623893937966, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1890107336945032190 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7167698958914287260, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1890107336945032191 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4427725877682659952, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2791173484222037931
 PrefabInstance:
   m_ObjectHideFlags: 0

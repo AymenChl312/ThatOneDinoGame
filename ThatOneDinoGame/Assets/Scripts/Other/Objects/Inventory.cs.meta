@@ -3,7 +3,12 @@ guid: 33c6608f9bb14a44aa82781d28f5546e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - sound: {instanceID: 0}
+  - coinsCountText: {instanceID: 0}
+  - itemImage: {instanceID: 0}
+  - empty: {instanceID: 0}
+  - itemName: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
