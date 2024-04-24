@@ -44,5 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c6608f9bb14a44aa82781d28f5546e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 924fd23bc6c9edd45b688154139b3cdf, type: 3}
   coinsCount: 0
+  content: []
+  contentCurrentIndex: 0
   coinsCountText: {fileID: 0}
+  itemImage: {fileID: 0}
+  empty: {fileID: 21300000, guid: 60fb72fdbc2b0b741a500a46330dcae9, type: 3}
+  itemName: {fileID: 0}
+  playerEffects: {fileID: 0}

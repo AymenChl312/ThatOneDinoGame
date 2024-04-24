@@ -196,6 +196,63 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2940481169764435832, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
   m_PrefabInstance: {fileID: 1890107336945032183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &105277821
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4959127009145999348, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_Name
+      value: Temporange
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.9433365
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.2859097
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835136758258155148, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68ead3b71561b5147966f564eba9d052, type: 3}
 --- !u!114 &124685001 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8393547957451774613, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
@@ -4315,6 +4372,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2791173484603557215, guid: 1e8971982056898449be6378cfa890fc, type: 3}
   m_PrefabInstance: {fileID: 2791173484222037931}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &432274172 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8504660459058670287, guid: 1e8971982056898449be6378cfa890fc, type: 3}
+  m_PrefabInstance: {fileID: 2791173484222037931}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432274164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be67213ea7f2034c8c90869dcfff1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &446419257
 GameObject:
   m_ObjectHideFlags: 0
@@ -4884,6 +4952,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1254933062}
     - target: {fileID: 190978691979010800, guid: 68d62ea0b3686b745826e66423992b8d, type: 3}
+      propertyPath: playerEffects
+      value: 
+      objectReference: {fileID: 432274172}
+    - target: {fileID: 190978691979010800, guid: 68d62ea0b3686b745826e66423992b8d, type: 3}
       propertyPath: coinsCountText
       value: 
       objectReference: {fileID: 1858015617}
@@ -5273,6 +5345,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2515464438799169632, guid: 89812068e98ff7e41ad29daba2ddfc2e, type: 3}
+      propertyPath: playerEffects
+      value: 
+      objectReference: {fileID: 432274172}
+    - target: {fileID: 2515464438799169632, guid: 89812068e98ff7e41ad29daba2ddfc2e, type: 3}
       propertyPath: isPlayerPresentByDefault
       value: 1
       objectReference: {fileID: 0}
@@ -5403,3 +5479,4 @@ SceneRoots:
   - {fileID: 35271752}
   - {fileID: 1511493135747389286}
   - {fileID: 1421100400}
+  - {fileID: 105277821}

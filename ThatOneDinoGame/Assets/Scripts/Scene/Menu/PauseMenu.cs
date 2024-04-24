@@ -59,8 +59,14 @@ public class PauseMenu : MonoBehaviour
             PlayerMovement.instance.enabled = true;
         }
         StartCoroutine(PauseClose());
-        
-        Time.timeScale = 1;
+        if(CurrentSceneManager.instance.temporange == true)
+        {
+            Time.timeScale = 0.5f;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
         gameIsPaused = false;
     }
 
@@ -93,14 +99,28 @@ public class PauseMenu : MonoBehaviour
     {
         bulles.SetBool("isOpen", true);
         pauseText.SetBool("isOpen", true);
-        yield return new WaitForSeconds(1f);
+        if(CurrentSceneManager.instance.temporange == true)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1f);
+        } 
     }
 
     public IEnumerator PauseClose()
     {
         bulles.SetBool("isOpen", false);
         pauseText.SetBool("isOpen", false);
-        yield return new WaitForSeconds(2f);
+        if(CurrentSceneManager.instance.temporange == true)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1f);
+        } 
         pauseMenuUI.SetActive(false);
     }
 }

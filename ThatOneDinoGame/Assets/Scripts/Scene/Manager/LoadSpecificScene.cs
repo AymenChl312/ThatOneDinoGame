@@ -22,6 +22,10 @@ public class LoadSpecificScene : MonoBehaviour
                 CurrentSceneManager.instance.active = false;
                 CurrentSceneManager.instance.powerUpActive();
             }
+            if(CurrentSceneManager.instance.temporange == true)
+            {
+                PlayerEffects.instance.deadPlayerOff(300);
+            }
         }
     }
 

@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float climbSpeed;
     public float jumpForce;
     public float trampoJumpForce;
-
+ 
     //PowerUp
 
     public bool doubleJumpPowerUp = false;

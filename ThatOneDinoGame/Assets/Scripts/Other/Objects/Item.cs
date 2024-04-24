@@ -7,6 +7,14 @@ public class Item : ScriptableObject
     public string itemName;
     public string description;
     public Sprite image;
+
+    //Bananailes
     public bool doubleJump;
+
+    //Temporange
+    public bool temporange;
+    public int speed;
+    public float slowTime;
+    public float duration;
 
 }

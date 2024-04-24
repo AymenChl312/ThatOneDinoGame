@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     public Image itemImage;
     public Sprite empty;
     public TextMeshProUGUI itemName;
-
+    
     public static Inventory instance;
 
     private void Awake()
@@ -60,7 +60,12 @@ public class Inventory : MonoBehaviour
         }
         Audio_Manager.instance.PlayClipAt(sound, transform.position);
         Item currentItem = content[contentCurrentIndex];
+        //Bananailes
         CurrentSceneManager.instance.doubleJumpItem = currentItem.doubleJump;
+        //Temporange
+        CurrentSceneManager.instance.temporange = currentItem.temporange;
+        PlayerEffects.instance.TemporangeOn(currentItem.speed, currentItem.duration, currentItem.slowTime);
+        //
         CurrentSceneManager.instance.powerUpActive();
         content.Remove(currentItem);
         GetNextItem();

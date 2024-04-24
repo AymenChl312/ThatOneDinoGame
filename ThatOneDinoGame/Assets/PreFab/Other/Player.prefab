@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2791173484603557200}
   - component: {fileID: 2791173484603557207}
   - component: {fileID: 2791173484603557206}
+  - component: {fileID: 8504660459058670287}
   m_Layer: 5
   m_Name: Player
   m_TagString: Player
@@ -218,6 +219,7 @@ MonoBehaviour:
   invincibilityTimeAfterHit: 2
   jumpDeath: 150
   hitSound: {fileID: 8300000, guid: 19906059bb4800d40a81876b9fa74af1, type: 3}
+  playerEffects: {fileID: 8504660459058670287}
 --- !u!70 &2791173484603557206
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -253,3 +255,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0.020780802, y: -0.48105323}
   m_Size: {x: 0.45953226, y: 0.9750364}
   m_Direction: 0
+--- !u!114 &8504660459058670287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2791173484603557215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be67213ea7f2034c8c90869dcfff1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dead: 0
