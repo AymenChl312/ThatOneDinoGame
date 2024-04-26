@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   settingsWindow: {fileID: 0}
+  bulles: {fileID: 0}
+  pauseText: {fileID: 0}
 --- !u!114 &8785153614368521568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   isTalking: 0
+  textSpeed: 0.03
   nameText: {fileID: 0}
   dialogueText: {fileID: 0}
   characterSprite: {fileID: 0}
-  stopAudioSource: 1

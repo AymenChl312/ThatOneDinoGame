@@ -21,6 +21,7 @@ public class PlayerEffects : MonoBehaviour
     {
         PlayerMovement.instance.moveSpeed += speedGiven;
         Time.timeScale = slowTime;
+        DialogueManager.instance.textSpeed /= 2;
         StartCoroutine(TemporangeOff(speedGiven, speedDuration));
 
     }
@@ -31,6 +32,7 @@ public class PlayerEffects : MonoBehaviour
         if (dead == false)
         {
             PlayerMovement.instance.moveSpeed -= speedGiven;
+            DialogueManager.instance.textSpeed *= 2;
         }
         Time.timeScale = 1;
         CurrentSceneManager.instance.active = false;
@@ -41,6 +43,7 @@ public class PlayerEffects : MonoBehaviour
     public void deadPlayerOff(int speedGiven)
     {
         dead = true;
+        DialogueManager.instance.textSpeed *= 2;
         CurrentSceneManager.instance.active = false;
         CurrentSceneManager.instance.temporange = false;
         PlayerMovement.instance.moveSpeed -= speedGiven;

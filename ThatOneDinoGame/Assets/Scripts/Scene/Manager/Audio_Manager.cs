@@ -7,6 +7,7 @@ public class Audio_Manager : MonoBehaviour
     public AudioSource audioSource;
     public int musicIndex = 0;
     public AudioMixerGroup soundEffectMixer;
+    public bool stop=false;
 
     public static Audio_Manager instance;
 
@@ -28,6 +29,8 @@ public class Audio_Manager : MonoBehaviour
         audioSource.clip = music;
         audioSource.Play();
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -53,7 +56,16 @@ public class Audio_Manager : MonoBehaviour
         audioSource.clip = clip;
         audioSource.outputAudioMixerGroup = soundEffectMixer;
         audioSource.Play();
-        Destroy(tempGO, clip.length);
+        if(stop)
+        {
+            Destroy(tempGO, 0.5f); 
+            stop = false; 
+        }
+        else
+        {
+            Destroy(tempGO, clip.length);
+        } 
         return audioSource;
     }
 }
+

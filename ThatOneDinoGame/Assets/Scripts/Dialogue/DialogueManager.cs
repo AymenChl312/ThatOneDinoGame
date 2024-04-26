@@ -7,9 +7,9 @@ using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour
 {
     public Animator animator;
-    public static DialogueManager instance;
-    public bool isTalking;
 
+    public bool isTalking;
+    public float textSpeed;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public Image characterSprite;
@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<Sprite> sprites;
     private Queue<string> names;
     private Queue<AudioClip> characterVoices;
+    public static DialogueManager instance;
 
 
     private void Awake()
@@ -105,10 +106,10 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             if(stopAudioSource)
             {
-                audioSource.Stop();
+                Audio_Manager.instance.stop = true;
             }
-            audioSource.PlayOneShot(characterVoice);      
-            yield return new WaitForSeconds(0.03f);
+            Audio_Manager.instance.PlayClipAt(characterVoice, transform.position);    
+            yield return new WaitForSeconds(textSpeed);
         }
     }
     void EndDialogue()
