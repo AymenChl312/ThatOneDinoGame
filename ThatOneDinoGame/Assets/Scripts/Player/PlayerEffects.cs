@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerEffects : MonoBehaviour
 {
     public bool dead = false;
+    public Rigidbody2D rb;
 
     public static PlayerEffects instance;
 
@@ -20,8 +21,11 @@ public class PlayerEffects : MonoBehaviour
     public void TemporangeOn(int speedGiven, float speedDuration, float slowTime)
     {
         PlayerMovement.instance.moveSpeed += speedGiven;
+        PlayerMovement.instance.climbSpeed += speedGiven;
         Time.timeScale = slowTime;
         DialogueManager.instance.textSpeed /= 2;
+        rb.mass = 0.6f;
+        rb.gravityScale = 2.5f;
         StartCoroutine(TemporangeOff(speedGiven, speedDuration));
 
     }
@@ -32,9 +36,12 @@ public class PlayerEffects : MonoBehaviour
         if (dead == false)
         {
             PlayerMovement.instance.moveSpeed -= speedGiven;
+            PlayerMovement.instance.climbSpeed -= speedGiven;
             DialogueManager.instance.textSpeed *= 2;
         }
         Time.timeScale = 1;
+        rb.mass = 1;
+        rb.gravityScale = 1;
         CurrentSceneManager.instance.active = false;
         CurrentSceneManager.instance.temporange = false;
         CurrentSceneManager.instance.powerUpActive();
@@ -47,6 +54,9 @@ public class PlayerEffects : MonoBehaviour
         CurrentSceneManager.instance.active = false;
         CurrentSceneManager.instance.temporange = false;
         PlayerMovement.instance.moveSpeed -= speedGiven;
+        PlayerMovement.instance.climbSpeed -= speedGiven;
         Time.timeScale = 1;
+        rb.mass = 1;
+        rb.gravityScale = 1;
     }
 }

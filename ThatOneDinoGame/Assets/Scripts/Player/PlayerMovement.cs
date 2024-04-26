@@ -63,19 +63,19 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             animator.SetFloat("Speed", characterVelocity);
-            animator.SetBool("Jump", false);
         }
         else 
         {
             animator.SetBool("Jump", true);
         }
+        
     }
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
             if (!isClimbing)
             {
-                rb.gravityScale = 1;
+                
                 Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
                 rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
 
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                rb.gravityScale = 0;
+                
                 Vector3 targetVelocity = new Vector2(_horizontalMovement, _verticalMovement);
                 rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
                 if (isJumping)
@@ -128,13 +128,18 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump"))
             {
-                if (isGrounded)
+                if (isGrounded) 
                 {
                     Audio_Manager.instance.PlayClipAt(jumpSound, transform.position);
                     isJumping = true;
                 }
             }
 
+        }
+        if (animator.GetBool("Jump")==true && isGrounded == true)
+        {
+            animator.SetBool("Jump", false);
+            animator.SetTrigger("onGround");
         }
         
     }

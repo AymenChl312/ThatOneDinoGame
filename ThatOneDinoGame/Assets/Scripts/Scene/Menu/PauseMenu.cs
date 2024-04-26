@@ -115,11 +115,11 @@ public class PauseMenu : MonoBehaviour
         pauseText.SetBool("isOpen", false);
         if(CurrentSceneManager.instance.temporange == true)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
         }
         else
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
         } 
         pauseMenuUI.SetActive(false);
     }

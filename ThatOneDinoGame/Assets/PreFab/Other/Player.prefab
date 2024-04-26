@@ -137,9 +137,9 @@ MonoBehaviour:
   moveSpeed: 250
   climbSpeed: 150
   jumpForce: 250
-  trampoJumpForce: 500
+  trampoJumpForce: 400
   doubleJumpPowerUp: 0
-  doubleJumpForce: 350
+  doubleJumpForce: 300
   isJumping: 0
   isClimbing: 0
   groundCheck: {fileID: 2791173483838997796}
@@ -191,7 +191,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ff4547e1feb5bb846bdc4b3d94cfc9ca, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -219,7 +219,6 @@ MonoBehaviour:
   invincibilityTimeAfterHit: 2
   jumpDeath: 150
   hitSound: {fileID: 8300000, guid: 19906059bb4800d40a81876b9fa74af1, type: 3}
-  playerEffects: {fileID: 8504660459058670287}
 --- !u!70 &2791173484603557206
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -268,3 +267,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dead: 0
+  rb: {fileID: 2791173484603557213}

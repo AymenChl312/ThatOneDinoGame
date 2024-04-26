@@ -5,6 +5,7 @@ public class Ladder : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     public BoxCollider2D ladderCollider;
+    public Rigidbody2D rb;
 
 
     void Awake()
@@ -16,6 +17,7 @@ public class Ladder : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            rb.gravityScale =0;
             playerMovement.isClimbing = true;
             ladderCollider.isTrigger = true;
 
@@ -26,6 +28,14 @@ public class Ladder : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if(CurrentSceneManager.instance.temporange == true)
+            {
+                rb.gravityScale = 2.5f;
+            }
+            else
+            {
+                rb.gravityScale = 1f;
+            }
             playerMovement.isClimbing = false;
             ladderCollider.isTrigger = false;
         }
