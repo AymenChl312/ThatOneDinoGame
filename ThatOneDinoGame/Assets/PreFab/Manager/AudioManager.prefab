@@ -145,3 +145,4 @@ MonoBehaviour:
   audioSource: {fileID: 595104701802787240}
   musicIndex: 0
   soundEffectMixer: {fileID: 5521625657208970301, guid: 6e253ff45110f1043b567288b415e521, type: 2}
+  stop: 0

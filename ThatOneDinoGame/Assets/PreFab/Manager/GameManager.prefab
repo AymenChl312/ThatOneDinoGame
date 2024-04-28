@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3828915565572117603}
   - component: {fileID: 8785153614368521568}
   - component: {fileID: 3340826042861909476}
+  - component: {fileID: 8538553066390891173}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -80,3 +81,22 @@ MonoBehaviour:
   nameText: {fileID: 0}
   dialogueText: {fileID: 0}
   characterSprite: {fileID: 0}
+--- !u!114 &8538553066390891173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2763449001905264049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dd0baa0a9f40349a1ea4802ce9aee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: 26521b715ad1dfb4082baca38fa79868, type: 3}
+  audioSource: {fileID: 0}
+  animator: {fileID: 0}
+  sellButtonPrefab: {fileID: 4034745573895937482, guid: d7b898066b89450439ff7260f61ffd22, type: 3}
+  sellButtonsParent: {fileID: 0}
+  dialogueText: {fileID: 0}
+  textSpeed: 0.03

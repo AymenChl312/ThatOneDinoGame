@@ -4853,6 +4853,14 @@ PrefabInstance:
       propertyPath: settingsWindow
       value: 
       objectReference: {fileID: 52560671}
+    - target: {fileID: 8538553066390891173, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1890107336945032185}
+    - target: {fileID: 8538553066390891173, guid: 7bb126cf93e35914a94f6af8dfaa0473, type: 3}
+      propertyPath: sellButtonsParent
+      value: 
+      objectReference: {fileID: 1890107336945032184}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5222,6 +5230,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+--- !u!224 &1890107336945032184 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8718216962989047893, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1890107336945032185 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6995902575171092753, guid: ddaef59c64960ac419b5de1e74f72b93, type: 3}
+  m_PrefabInstance: {fileID: 1890107336945032183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2791173484222037931
 PrefabInstance:
   m_ObjectHideFlags: 0

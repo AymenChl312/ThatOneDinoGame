@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7228349908128033687}
   - component: {fileID: 1270296094222590182}
   m_Layer: 0
-  m_Name: TestDialoguePNJ
+  m_Name: DialoguePNJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

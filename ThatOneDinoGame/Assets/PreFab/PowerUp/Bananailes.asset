@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Bananailes
   description: Celui qui le mange peut faire deux sauts !
   image: {fileID: 21300000, guid: 4857d676f5f33a14194cd02656b0dc13, type: 3}
+  price: 5
   doubleJump: 1
   temporange: 0
   speed: 1
