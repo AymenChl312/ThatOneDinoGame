@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 2
   itemName: Temporange
   description: Le temps autour du joueur est ralenti !
-  image: {fileID: -462098581, guid: 5c3579b5ae7d3d14884e39cf4a7ac558, type: 3}
+  image: {fileID: 21300000, guid: 2f8778133e353aa4693694962cb410ab, type: 3}
   price: 10
   doubleJump: 0
   temporange: 1

@@ -1195,11 +1195,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6972917730640923887, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
   m_PrefabInstance: {fileID: 3795283115152659857}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2133071930 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 767241762817670815, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
-  m_PrefabInstance: {fileID: 3795283115152659857}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3795283115152659857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1208,6 +1203,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 219253326}
     m_Modifications:
+    - target: {fileID: 1149184042571794327, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000012397766
+      objectReference: {fileID: 0}
     - target: {fileID: 1210359328510119640, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1220,10 +1219,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2122341282957566544, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
-      propertyPath: inGameToggle
-      value: 
-      objectReference: {fileID: 2133071930}
     - target: {fileID: 2256725390429577620, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1235,10 +1230,6 @@ PrefabInstance:
     - target: {fileID: 3834947188642167203, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926164215599299801, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4641243823852198278, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1340,17 +1331,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8500975966042126753, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
-      propertyPath: m_ScrollSensitivity
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 8521544024000602057, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
       propertyPath: m_Name
       value: SettingsWindow
-      objectReference: {fileID: 0}
-    - target: {fileID: 8521544024000602057, guid: 8fb10d69784109d4d8e2c89bd8dbcf6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
