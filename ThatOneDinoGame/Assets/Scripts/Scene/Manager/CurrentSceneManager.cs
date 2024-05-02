@@ -32,20 +32,18 @@ public class CurrentSceneManager : MonoBehaviour
     {
         if (active==false)
         {
-            PlayerMovement.instance.GetComponent<SpriteRenderer>().color = Color.white;
             PlayerMovement.instance.doubleJumpPowerUp = false;
+            PowerUpSkin.instance.skinNr = 0;
             
         }
         if (doubleJumpItem == true)
         {
             active = true;
-            PlayerMovement.instance.GetComponent<SpriteRenderer>().color = Color.yellow;
             PlayerMovement.instance.doubleJumpPowerUp = true;
         }
         if (temporange == true)
         {
             active = true;
-            PlayerMovement.instance.GetComponent<SpriteRenderer>().color = Color.gray;
         }
     }
 }

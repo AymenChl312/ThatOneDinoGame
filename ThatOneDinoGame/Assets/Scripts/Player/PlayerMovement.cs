@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -103,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (doubleJumpPowerUp)
         {
+            PowerUpSkin.instance.skinNr = 1;
             if(isGrounded && doubleJump==0)
             {
                 doubleJump = 1;
@@ -140,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Jump", false);
             animator.SetTrigger("onGround");
+            
         }
         
     }

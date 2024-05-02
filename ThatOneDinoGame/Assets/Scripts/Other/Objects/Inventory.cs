@@ -66,7 +66,9 @@ public class Inventory : MonoBehaviour
         CurrentSceneManager.instance.temporange = currentItem.temporange;
         PlayerEffects.instance.TemporangeOn(currentItem.speed, currentItem.duration, currentItem.slowTime);
         //
+        CurrentSceneManager.instance.active = true;
         CurrentSceneManager.instance.powerUpActive();
+        PowerUpSkin.instance.skinNr = currentItem.id;
         content.Remove(currentItem);
         GetNextItem();
         UpdateInventoryUI();
