@@ -65,13 +65,15 @@ public class Inventory : MonoBehaviour
         //Temporange
         CurrentSceneManager.instance.temporange = currentItem.temporange;
         PlayerEffects.instance.TemporangeOn(currentItem.speed, currentItem.duration, currentItem.slowTime);
+        //Baielectrik
+        CurrentSceneManager.instance.baielectrik = currentItem.baielectrik;
         //
         CurrentSceneManager.instance.active = true;
         CurrentSceneManager.instance.powerUpActive();
-        PowerUpSkin.instance.skinNr = currentItem.id;
         content.Remove(currentItem);
         GetNextItem();
         UpdateInventoryUI();
+        PowerUpSkin.instance.skinNr = currentItem.id;
     }
 
     public void GetNextItem()

@@ -77,6 +77,7 @@ public class PlayerHealth : MonoBehaviour
         //PowerUp
         CurrentSceneManager.instance.active = false;
         CurrentSceneManager.instance.doubleJumpItem = false;
+        CurrentSceneManager.instance.baielectrik = false;
         if (CurrentSceneManager.instance.temporange == true)
         {
             PlayerEffects.instance.deadPlayerOff(300);

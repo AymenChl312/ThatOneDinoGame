@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
 
     public bool isJumping;
-    private bool isGrounded;
     private int doubleJump = 1;
     [HideInInspector]
     public bool isClimbing;
@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
+    private bool isFacingRight = true;
     private float horizontalMovement;
     private float verticalMovement;
 
@@ -50,18 +51,19 @@ public class PlayerMovement : MonoBehaviour
 
 
     void FixedUpdate()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
+    {   
+        if(PlayerDash.instance.isDashing)
+        {
+            return;
+        }
         
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
         verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
 
         MovePlayer(horizontalMovement, verticalMovement);
 
-        Flip(rb.velocity.x);
-
         float characterVelocity = Mathf.Abs(rb.velocity.x);
-        if (isGrounded)
+        if (isGrounded())
         {
             animator.SetFloat("Speed", characterVelocity);
         }
@@ -70,6 +72,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Jump", true);
         }
         
+    }
+
+    private bool isGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, collisionLayers);
     }
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
@@ -102,21 +109,26 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Flip();
+        if(PlayerDash.instance.isDashing)
+        {
+            return;
+        }
         if (doubleJumpPowerUp)
         {
             PowerUpSkin.instance.skinNr = 1;
-            if(isGrounded && doubleJump==0)
+            if(isGrounded() && doubleJump==0)
             {
                 doubleJump = 1;
             }
             if (Input.GetButtonDown("Jump"))
             {
-                if (isGrounded)
+                if (isGrounded())
                 {
                     Audio_Manager.instance.PlayClipAt(jumpSound, transform.position);
                     isJumping = true;
                 }
-                if (!isGrounded && doubleJump == 1)
+                if (!isGrounded() && doubleJump == 1)
                 {
                     Audio_Manager.instance.PlayClipAt(jumpSound, transform.position);
                     rb.velocity = Vector3.zero;
@@ -130,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump"))
             {
-                if (isGrounded) 
+                if (isGrounded()) 
                 {
                     Audio_Manager.instance.PlayClipAt(jumpSound, transform.position);
                     isJumping = true;
@@ -138,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-        if (animator.GetBool("Jump")==true && isGrounded == true)
+        if (animator.GetBool("Jump")==true && isGrounded() == true)
         {
             animator.SetBool("Jump", false);
             animator.SetTrigger("onGround");
@@ -168,15 +180,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    void Flip(float _velocity)
+    void Flip()
     {
-        if(_velocity> 0.1f)
+        if(isFacingRight && horizontalMovement <0f || !isFacingRight && horizontalMovement > 0f)
         {
-            spriteRenderer.flipX = false;
-        }else if (_velocity < -0.1f)
-        {
-            spriteRenderer.flipX = true;
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
+        
     }
 
     private void OnDrawGizmos()

@@ -18,4 +18,7 @@ public class Item : ScriptableObject
     public float slowTime;
     public float duration;
 
+    //Baielectrik
+    public bool baielectrik;
+
 }

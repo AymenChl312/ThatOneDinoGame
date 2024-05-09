@@ -11,6 +11,7 @@ public class CurrentSceneManager : MonoBehaviour
     public bool active = false;
     public bool doubleJumpItem;
     public bool temporange;
+    public bool baielectrik;
 
     public int levelToUnlock;
 
@@ -33,8 +34,8 @@ public class CurrentSceneManager : MonoBehaviour
         if (active==false)
         {
             PlayerMovement.instance.doubleJumpPowerUp = false;
+            PlayerDash.instance.baielectrik = false;
             PowerUpSkin.instance.skinNr = 0;
-            
         }
         if (doubleJumpItem == true)
         {
@@ -44,6 +45,11 @@ public class CurrentSceneManager : MonoBehaviour
         if (temporange == true)
         {
             active = true;
+        }
+        if (baielectrik == true)
+        {
+            active = true;
+            PlayerDash.instance.baielectrik = true;
         }
     }
 }
