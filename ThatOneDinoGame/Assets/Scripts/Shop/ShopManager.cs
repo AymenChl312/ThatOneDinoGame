@@ -35,7 +35,7 @@ public class ShopManager : MonoBehaviour
         UpdateItemToSell(items);
         animator.SetBool("isOpen", true);
 
-        PlayerMovement.instance.rb.velocity = Vector3.zero;
+        PlayerMovement.instance.rb.linearVelocity = Vector3.zero;
         PlayerMovement.instance.animator.SetFloat("Speed", 0);
         PlayerMovement.instance.enabled=false;
 

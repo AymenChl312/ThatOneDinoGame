@@ -67,7 +67,7 @@ public class PlayerHealth : MonoBehaviour
     {
         PlayerMovement.instance.rb.AddForce(new Vector2(0f, jumpDeath));
         PlayerMovement.instance.playerCollider.enabled = false;
-        PlayerMovement.instance.rb.velocity = Vector3.zero;
+        PlayerMovement.instance.rb.linearVelocity = Vector3.zero;
         PlayerSpawn = CurrentSceneManager.instance.respawnPoint;
         fadeSystem = GameObject.FindGameObjectWithTag("FadeSystem").GetComponent<Animator>();
         StartCoroutine(ReplacePlayer());

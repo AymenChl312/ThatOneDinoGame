@@ -49,7 +49,7 @@ public class PlayerDash : MonoBehaviour
         isDashing = true;
         float originalGravity = PlayerMovement.instance.rb.gravityScale;
         PlayerMovement.instance.rb.gravityScale = 0f;
-        PlayerMovement.instance.rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        PlayerMovement.instance.rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;

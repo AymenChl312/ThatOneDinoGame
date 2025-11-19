@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         MovePlayer(horizontalMovement, verticalMovement);
 
-        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        float characterVelocity = Mathf.Abs(rb.linearVelocity.x);
         if (isGrounded())
         {
             animator.SetFloat("Speed", characterVelocity);
@@ -84,8 +84,8 @@ public class PlayerMovement : MonoBehaviour
             if (!isClimbing)
             {
                 
-                Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-                rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+                Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.linearVelocity.y);
+                rb.linearVelocity = Vector3.SmoothDamp(rb.linearVelocity, targetVelocity, ref velocity, .05f);
 
                 if (isJumping)
                 {
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 
                 Vector3 targetVelocity = new Vector2(_horizontalMovement, _verticalMovement);
-                rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+                rb.linearVelocity = Vector3.SmoothDamp(rb.linearVelocity, targetVelocity, ref velocity, .05f);
                 if (isJumping)
                 {
                     rb.AddForce(new Vector2(0f, jumpForce));
@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
                 if (!isGrounded() && doubleJump == 1)
                 {
                     Audio_Manager.instance.PlayClipAt(jumpSound, transform.position);
-                    rb.velocity = Vector3.zero;
+                    rb.linearVelocity = Vector3.zero;
                     rb.AddForce(new Vector2(0f, doubleJumpForce));
                     doubleJump = 0;
                 }
@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("WeakSpot"))
         {
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             rb.AddForce(new Vector2(0f, jumpForce));
         }
     }
@@ -174,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.transform.CompareTag("Trampoline"))
         {
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             rb.AddForce(new Vector2(0f, trampoJumpForce));
         }
     }
